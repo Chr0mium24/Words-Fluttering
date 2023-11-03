@@ -1,0 +1,58 @@
+body {
+  background-color: antiquewhite;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100%视窗高度 */
+}
+  
+
+.centered-input {
+  font-family: "Noto Sans";
+  font-size: 40px;
+  color: chocolate;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent; /* 使输入框透明 */
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.centered-input:hover {
+  border-color: #0078d4; /* 鼠标悬停时改变下划线颜色 */
+  transform: scale(1.05); /* 添加悬停时的缩放效果 */
+}
+
+.centered-input input {
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.centered-input.cheer-effect {
+  border-color: #0078d4;
+  transform: scale(1.05);
+  animation: cheer-animation 0.5s ease;
+}
+
+@keyframes cheer-animation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2) rotate(5deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
